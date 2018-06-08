@@ -1,0 +1,44 @@
+ImageWidget:
+
+<ImageWidget>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Image:
+            source: root.source
+
+        BoxLayout:
+            size_hint_y: 0.5
+            padding: 20, 30, 20, 10
+            Button:
+                id: button1
+                text: "Sample1"
+                fontsize: 30
+                on_press: root.buttonClicked()
+            
+            Button:
+                id: button2
+                text: "Sample2"
+                fontsize: 30
+                on_press: root.buttonClicked2()
+
+            Button:
+                id: button3
+                text: "Sample3"
+                fontsize: 30
+                on_press: root.buttonClicked3()
+        BoxLayout:
+            size_hint_y: 0.3
+            TextInput:
+                id: text_box
+                size_hint_x: 70
+                font_size: 80
+                focus: True
+                on_text_validate: root.buttonClicked4()
+            Button:
+                id: button3
+                size_hint_x: 30
+                text: "OK"
+                font_size: 30
+                on_press: root.buttonClicked4()
